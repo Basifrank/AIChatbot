@@ -7,8 +7,8 @@ Original file is located at
     https://colab.research.google.com/drive/1q-GbMn8oQDRRdGjXOQdw8GxlRjtHqJAj
 """
 
-from google.colab import drive
-drive.mount('/content/drive')
+#from google.colab import drive
+#drive.mount('/content/drive')
 
 """importing some modules and loading in our json data. Make sure that your .json file is in the same directory as your python script!"""
 
@@ -20,6 +20,7 @@ import numpy
 import tflearn
 import tensorflow
 import random
+import os
 
 import json
 with open('intents.json') as file:
@@ -139,16 +140,19 @@ def chat():
         if inp.lower() == "quit":
             break
 
-        results = model.predict([bag_of_words(inp, words)])
+        results = model.predict([bag_of_words(inp, words)])[0]
         results_index = numpy.argmax(results)
-        tag = labels[results_index]
+        tag = labels[results_index] 
+        if results[results_index] > 0.7:
+            for tg in data["intents"]:
+                if tg['tag'] == tag:
+                    responses = tg['responses']
 
-        for tg in data["intents"]:
-            if tg['tag'] == tag:
-                responses = tg['responses']
+            print(random.choice(responses))
 
-        print(random.choice(responses))
-
+        else:
+        	print("I didn't get that, try again!")
+        	
 chat()
 
 
