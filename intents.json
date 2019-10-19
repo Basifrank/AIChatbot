@@ -20,8 +20,8 @@
          "context_set": ""
         },
         {"tag": "shop",
-         "patterns": ["Id like to buy something", "whats on the menu", "what do you reccommend?", "could i get something to eat"],
-         "responses": ["We sell chocolate chip cookies for $2!", "Cookies are on the menu!"],
+         "patterns": ["Id like to run a project", "whats on the menu", "what project do you reccommend?", "could i get something to eat"],
+         "responses": ["Our projects are affordable", "web development projects are on the menu!"],
          "context_set": ""
         },
         {"tag": "hours",
@@ -29,5 +29,19 @@
          "responses": ["We are open 7am-4pm Monday-Friday!"],
          "context_set": ""
         }
+
+        {"tag": "Project",
+         "patterns": ["I want to do a project", "what Project are available", "My project is incomplete"],
+         "responses": ["What's your project about", "We handle various project", "please visit the project section for more details"],
+         "context_set": ""
+        }
+
+        {"tag": "Price",
+         "patterns": ["I was over charged", "The prices are not computed accurately", "excessive billing"],
+         "responses": ["for pricing error, please send an email to customer@lancers.com", "sorry about the excessive charges, please give details of transactions"],
+         "context_set": ""
+        }
+
+
    ]
 }
