@@ -10,11 +10,13 @@
 
 # AI Chatbot
 
-## AI Chatbot deployed on team Lancers
-
-The GPT-2 model is a Natural language processing model, created by openai. It is a high-level NLP model that can be used for reading comprehension, text completion, summarization, translation, and question-answering when trained with a dataset.
-The team task is to train and fine-tune the model with Kaggle ubuntu data and make report on the findings.
+## AI Chatbot to be deployed on team Lancers
+#testing
+- clone the repo
+- change directory to  AIChatbot
+- Install the libraries using the requirement.txt file
+- on your terminal, call the aichatbot.py 
 
 ###Updated colab link
 
-https://colab.research.google.com/drive/1Y6YFt5tfIXt3Z4ePK8fghg-EZHtcW2ue
+https://colab.research.google.com/drive/1q-GbMn8oQDRRdGjXOQdw8GxlRjtHqJAj
